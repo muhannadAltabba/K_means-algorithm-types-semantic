@@ -1,0 +1,989 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#"
+     xml:base="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#actOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#actOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Limitation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#canExtract -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#canExtract">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#input"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Feature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#canGetData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#canGetData">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#input"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Dataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#evaluateBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#evaluateBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Output"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#ElevationMetric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#excutes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#excutes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasExample -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasExample">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#uses"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasHyperParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasHyperParameter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#HyperParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasInput">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#input"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasLayer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasLayer">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Layer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasModel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasModel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Model"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasNext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#hasNext">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#isPartOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#learns -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#learns">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#produce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#produce">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Output"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#solvedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#solvedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Limitation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#sufferFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#sufferFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Limitation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#useAlgorithm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#useAlgorithm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#useFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#useFunction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#useOptimizer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#useOptimizer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#OptimizationAlgorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#uses"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#IsSOTA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#IsSOTA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#ElevationMetric"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Dataset"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#HyperParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Layer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Limitation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#OptimizationAlgorithm"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Parameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#formula -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#formula">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Function"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Layer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Model"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#OptimizationAlgorithm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#isSupervised -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#isSupervised">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#label">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#input"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#sample -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#sample">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#input"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#ElevationMetric"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Feature"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Function"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#HyperParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Output"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Parameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Dataset -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Dataset"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#ElevationMetric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#ElevationMetric"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Feature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Feature"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Function"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#HyperParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#HyperParameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Layer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Layer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Limitation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Limitation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Model"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#OptimizationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#OptimizationAlgorithm"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Output -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Output"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Task"/>
+    
+
+
+    <!-- http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#input -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#input"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf -->
+
+    <owl:NamedIndividual rdf:about="http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <owl:sameAs rdf:resource="https://www.w3.org/ns/ai#kmean++"/>
+        <excutes rdf:resource="https://www.w3.org/ns/ai#k_means++Opreator1"/>
+        <hasExample rdf:resource="https://www.w3.org/ns/ai#convexShapeClustering"/>
+        <hasHyperParameter rdf:resource="https://www.w3.org/ns/ai#centroidsNumber"/>
+        <hasHyperParameter rdf:resource="https://www.w3.org/ns/ai#numberOfIteration"/>
+        <learns rdf:resource="https://www.w3.org/ns/ai#setOfCluster"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation2"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation3"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation4"/>
+        <useFunction rdf:resource="https://www.w3.org/ns/ai#k-meansErrorFunction"/>
+        <isSupervised xml:lang="en">false</isSupervised>
+        <isSupervised xml:lang="ar">خطأ</isSupervised>
+        <name xml:lang="ar">k-means++</name>
+        <name xml:lang="en">k-means++</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dl.acm.org/doi/10.1145/1014052.1014118 -->
+
+    <owl:NamedIndividual rdf:about="https://dl.acm.org/doi/10.1145/1014052.1014118">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <hasExample rdf:resource="https://www.w3.org/ns/ai#nonConvexShapeClustering"/>
+        <hasHyperParameter rdf:resource="https://www.w3.org/ns/ai#centroidsNumber"/>
+        <hasHyperParameter rdf:resource="https://www.w3.org/ns/ai#numberOfIteration"/>
+        <learns rdf:resource="https://www.w3.org/ns/ai#setOfCluster"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation1"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation2"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation4"/>
+        <useFunction rdf:resource="https://www.w3.org/ns/ai#KernelK-meansErorrFunction"/>
+        <isSupervised xml:lang="en">false</isSupervised>
+        <isSupervised xml:lang="ar">خطأ</isSupervised>
+        <name xml:lang="ar">kernel k-means</name>
+        <name xml:lang="en">kernel k-means</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://onlinelibrary.wiley.com/doi/10.1002/9780470316801.ch2 -->
+
+    <owl:NamedIndividual rdf:about="https://onlinelibrary.wiley.com/doi/10.1002/9780470316801.ch2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <excutes rdf:resource="https://www.w3.org/ns/ai#k_medoidsOpreator1"/>
+        <excutes rdf:resource="https://www.w3.org/ns/ai#kernelK-meansOpreator1"/>
+        <hasExample rdf:resource="https://www.w3.org/ns/ai#convexShapeClustering"/>
+        <hasHyperParameter rdf:resource="https://www.w3.org/ns/ai#centroidsNumber"/>
+        <hasHyperParameter rdf:resource="https://www.w3.org/ns/ai#numberOfIteration"/>
+        <learns rdf:resource="https://www.w3.org/ns/ai#setOfCluster"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation1"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation3"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation4"/>
+        <isSupervised xml:lang="en">false</isSupervised>
+        <isSupervised xml:lang="ar">خطأ</isSupervised>
+        <name xml:lang="ar">k-medoids</name>
+        <name xml:lang="en">k-medoids</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.1936.tb02137.x -->
+
+    <owl:NamedIndividual rdf:about="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.1936.tb02137.x">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Dataset"/>
+        <description xml:lang="en">The iris flower dataset or Fisher’s iris dataset is a multivariate dataset introduced by the British statistician and biologist Ronald Fisher in his 1936 paper (Fisher 1936). Each row of the table represents an iris flower, including its species and dimensions of its botanical parts, sepal and petal, in centimeters.</description>
+        <description xml:lang="ar">مجموعة بيانات زهرة القزحية أو مجموعة بيانات قزحية &quot;فيشر&quot; .وهي مجموعة بيانات متعددة المتغيرات قدمها الإحصائي وعالم الأحياء البريطاني رونالد فيشر في ورقته البحثية عام 1936 (فيشر 1936). يمثل كل صف من الجدول زهرة قزحية ، بما في ذلك أنواعها وأبعاد أجزائها النباتية ، السبل والبتلة ، بالسنتيمتر.</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html -->
+
+    <owl:NamedIndividual rdf:about="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Dataset"/>
+        <description xml:lang="en">generate a set of points according to the normal distribution function</description>
+        <description xml:lang="ar">إنشاء مجموعة من النقاط وفقًا لدالة التوزع الطبيعي</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_circles.html -->
+
+    <owl:NamedIndividual rdf:about="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_circles.html">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Dataset"/>
+        <description xml:lang="en">A simple dataset to visualize clustering and classification algorithms. it is generative dataset that makes a large circle containing a smaller circle in 2d.</description>
+        <description xml:lang="ar">هي مجموعة بيانات بسيطة لتصور خوارزميات العنقدة والتصنيف. وهي مجموعة بيانات توليدية, تقوم بتوليد دائرة كبيرة تحتوي على دائرة أصغر منها في الفضاء ثنائي البعد</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html -->
+
+    <owl:NamedIndividual rdf:about="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Dataset"/>
+        <description xml:lang="en">generate a set of points using sin and cos function</description>
+        <description xml:lang="ar">إنشاء مجموعة من النقاط وفقًا لدالتي الظل والتظل</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.cs.cmu.edu/~bhiksha/courses/mlsp.fall2010/class14/macqueen.pdf -->
+
+    <owl:NamedIndividual rdf:about="https://www.cs.cmu.edu/~bhiksha/courses/mlsp.fall2010/class14/macqueen.pdf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <owl:sameAs rdf:resource="https://www.w3.org/ns/ai#kmean"/>
+        <excutes rdf:resource="https://www.w3.org/ns/ai#k_meansOperator1"/>
+        <hasExample rdf:resource="https://www.w3.org/ns/ai#convexShapeClustering"/>
+        <hasHyperParameter rdf:resource="https://www.w3.org/ns/ai#centroidsNumber"/>
+        <hasHyperParameter rdf:resource="https://www.w3.org/ns/ai#numberOfIteration"/>
+        <learns rdf:resource="https://www.w3.org/ns/ai#setOfCluster"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation1"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation2"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation3"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation4"/>
+        <useFunction rdf:resource="https://www.w3.org/ns/ai#k-meansErrorFunction"/>
+        <isSupervised xml:lang="en">false</isSupervised>
+        <isSupervised xml:lang="ar">خطأ</isSupervised>
+        <name xml:lang="ar">k-means</name>
+        <name xml:lang="en">k-means</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#K-Medians -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#K-Medians">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Algorithm"/>
+        <excutes rdf:resource="https://www.w3.org/ns/ai#k-mediansOpreator1"/>
+        <hasExample rdf:resource="https://www.w3.org/ns/ai#convexShapeClustering"/>
+        <hasHyperParameter rdf:resource="https://www.w3.org/ns/ai#centroidsNumber"/>
+        <hasHyperParameter rdf:resource="https://www.w3.org/ns/ai#numberOfIteration"/>
+        <learns rdf:resource="https://www.w3.org/ns/ai#setOfCluster"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation1"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation3"/>
+        <sufferFrom rdf:resource="https://www.w3.org/ns/ai#k_meansLimitation4"/>
+        <useFunction rdf:resource="https://www.w3.org/ns/ai#K-Medians"/>
+        <name xml:lang="ar">k-medians</name>
+        <name xml:lang="en">k-medians</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#KernelK-meansErorrFunction -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#KernelK-meansErorrFunction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Function"/>
+        <description xml:lang="ar">يتم إسقاط نقاط البيانات إلى فضاء أبعاده أكبر ولكنه قابل للفصل خطياً ويتم العمل على تصغير مجموع مربعات المسافات بين النقاط في الفضاء الجديد لكل عنقود ومركز هذا العنقود</description>
+        <formula xml:lang="ar">SSE(S)=∑{c = 1 -&gt; count of cluster} ∑{x = 1 -&gt;object in cluster c}
+ ||point in new space(x) - center of cluseter c|| ^2</formula>
+        <formula xml:lang="en">SSE(S)=∑{c = 1 -&gt; count of cluster} ∑{x = 1 -&gt;object in cluster c}
+ ||point in new space(x) - center of cluseter c|| ^2</formula>
+        <type xml:lang="en">apply a kernel matrix to every two data points to convert to the new space then calculate the sum of squared error between all objects in cluster C and the centroid of that cluster</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#KernelK-meansOpreator2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#KernelK-meansOpreator2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#KernelK-meansOpreator3"/>
+        <description xml:lang="en">calculating distance / similarity d(Xn, μk) = || Φ(Xn) - Φ(μk) || between points after projecting them into new space by applying the kernel</description>
+        <description xml:lang="ar">يتم حساب المسافة أو التشابه وذلك بعد إسقاط النقاط إلى فضاء جديد</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#KernelK-meansOpreator3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#KernelK-meansOpreator3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#KernelK-meansOpreator4"/>
+        <description xml:lang="en">update the cluster means, that is, calculate the mean value of the objects for each cluster</description>
+        <description xml:lang="ar">إعادة حساب مراكز العناقيد الجديدة وهي متوسطات النقاط المسندة إليها</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#KernelK-meansOpreator4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#KernelK-meansOpreator4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <description xml:lang="en">repeat step 2 &amp; step 3 until the positions of the centers become fixed and do not change</description>
+        <description xml:lang="ar">يتم تكرار الخطوتان 2، 3 حتى يصبح التغير في مراكز العناقيد معدوماً أو الوصول إلى عدد معين (محدد مسبقاً) من التكرارات</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#centroidsNumber -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#centroidsNumber">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#HyperParameter"/>
+        <description xml:lang="en">The number of centroids must be determined before the algorithm  start working.</description>
+        <description xml:lang="ar">عدد المراكز الواجب تحديدها قبل بدء عمل الخوارزمية</description>
+        <type xml:lang="en">centroids number</type>
+        <type xml:lang="ar">عدد المراكز</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#clusteringEvaluate -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#clusteringEvaluate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#ElevationMetric"/>
+        <IsSOTA xml:lang="en">no</IsSOTA>
+        <IsSOTA xml:lang="ar">لا</IsSOTA>
+        <type xml:lang="en">Generally, clustering validation statistics can be categorized into 2 classes:
+1- Internal cluster validation: which uses the internal information of the clustering process to evaluate the goodness of a clustering structure without reference to external information. It can be also used for estimating the number of clusters and the appropriate clustering algorithm without any external data.
+This approach is based on the calculation of two parameters:
+
+	Compactness or cluster cohesion: Measures how close are the objects within the same cluster. A lower within-cluster variation is an indicator of a good compactness (i.e., a good clustering). The different indices for evaluating the compactness of clusters are based on distance measures such as the cluster-wise within average/median distances between observations.
+
+	Separation: Measures how well-separated a cluster is from other clusters. The indices used as separation measures include:
+	distances between cluster centers
+	the pairwise minimum distances between objects in different cluster.
+
+2- External cluster validation: which consists in comparing the results of a cluster analysis to an externally known result, such as externally provided class labels. It measures the extent to which cluster labels match externally supplied class labels. Since we know the “true” cluster number in advance, this approach is mainly used for selecting the right clustering algorithm for a specific data set.
+
+Generally, most of the indices used for internal clustering validation combine compactness and separation measures as follow:
+Index=((α * Separation))/((β* Compactness ) )
+Where αα and α, β are weights.</type>
+        <type xml:lang="ar">بشكل عام يمكن تصنيف اجرائيات التحقق من صحة العنقدة إلى فئتين
+
+1.التحقق من صحة العنقود الداخلي
+اخترع هذا النهج عام 2004، حيث يتم تقييم جودة بنية التجميع باستخدام المعلومات الداخلية لعملية التجميع دون الرجوع الى المعلومات الخارجية، ويمكن استخدامه لتقدير عدد المجموعات وخوارزمية التجميع المناسبة دون أي بيانات خارجية
+
+يعتمد هذا النهج على حساب معاملين، أولا حساب انضفاط (تماسك) العنقود: يقيس مدى تشابه الأغراض مع بعضها داخل نفس العنقود، حيث أنّ التشابه الأكبر يعني تماسكاً أكبر، أي جودة أفضل ، وثانياً تمايز (فصل) العنقود: يقيس مدى اختلاف عناصر العنقود عن عناصر العناقيد الأخرى، وتكون العلاقة النهائية كما يلي
+
+صحة العنقود الداخلي = معامل التماسك * وزن يتم اعينه / معامل التمايز * وزن يتم تعينه
+
+
+2- التحقق من صحة العنقود الخارجي
+اخترع هذا النهج عام 2008، يتم مقارنة نتائج تحليل العنقود بنتيجة معروفة خارجياً، أي يتم مقارنة نتائج خوارزمية التجميع مع النتائج الصحيحة، يتم استخدام هذا النهج بشكل أساسي لاختيار خوارزمية التجميع المناسبة لمجموعة بيانات محددة</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#convexShapeClustering -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#convexShapeClustering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Task"/>
+        <hasInput rdf:resource="https://www.w3.org/ns/ai#k_meanInput"/>
+        <produce rdf:resource="https://www.w3.org/ns/ai#k_meanOutput"/>
+        <uses rdf:resource="http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf"/>
+        <uses rdf:resource="https://onlinelibrary.wiley.com/doi/10.1002/9780470316801.ch2"/>
+        <uses rdf:resource="https://www.cs.cmu.edu/~bhiksha/courses/mlsp.fall2010/class14/macqueen.pdf"/>
+        <uses rdf:resource="https://www.w3.org/ns/ai#K-Medians"/>
+        <description xml:lang="en">Classification of unlabeled data having a convex distribution in space into a number of clusters, according to the similarity of these objects.</description>
+        <description xml:lang="ar">تصنيف البيانات غير المصنفة التي لها توزيع محدب في الفضاء إلى عدد من العناقيد ، وفقًا لمقدار التشابه بين هذه لأغراض.</description>
+        <type xml:lang="en">unsupervised learning</type>
+        <type xml:lang="ar">غير خاصع للإشراف</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k-meansErrorFunction -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k-meansErrorFunction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Function"/>
+        <formula xml:lang="ar">SSE(S)=∑{c = 1 -&gt; count of cluster} ∑{x = 1 -&gt;object in cluster c}
+ ||x - center of cluseter c|| ^2</formula>
+        <formula xml:lang="en">SSE(S)=∑{c = 1 -&gt; count of cluster} ∑{x = 1 -&gt;object in cluster c}
+ ||x - center of cluseter c|| ^2</formula>
+        <type xml:lang="en">This algorithm is based on making minimize for error function, which is the sum of squared error between all objects in cluster C and the centroid of that cluster</type>
+        <type xml:lang="ar">تعتمد هذه الخوارزمية على جعل تابع الخطأ أصغر ما يمكن، والذي نحصل عليه من مجموع مربعات المسافات بين الأغراض في كل عنقود ومركز هذا العنقود</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k-mediansErrorFunction -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k-mediansErrorFunction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Function"/>
+        <description xml:lang="en">This algorithm is based on making minimize for error function, which is the sum of squared error between all objects in cluster C and the centroid of that cluster(the values of the averages)</description>
+        <description xml:lang="ar">تعتمد هذه الخوارزمية على جعل تابع الخطأ أصغر ما يمكن، والذي نحصل عليه من مجموع مربعات المسافات بين الأغراض في كل عنقود ومركز هذا العنقود وهو القيمة الوسطى من بين القيم</description>
+        <formula xml:lang="ar">SSE(S)=∑{c = 1 -&gt; count of cluster} ∑{x = 1 -&gt;object in cluster c}
+ ||x - Medians(c)|| ^2</formula>
+        <formula xml:lang="en">SSE(S)=∑{c = 1 -&gt; count of cluster} ∑{x = 1 -&gt;object in cluster c}
+ ||x - Medians(c)|| ^2</formula>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k-mediansOpreator1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k-mediansOpreator1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#k-mediansOpreator2"/>
+        <description xml:lang="en">arbitrarily choose k objects from D as the initial cluster centers</description>
+        <description xml:lang="ar">اختيار مجموعة من النقاط بشكل عشوائي واعتبارها مراكز العناقيد</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k-mediansOpreator2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k-mediansOpreator2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#k-mediansOpreator3"/>
+        <description xml:lang="en">Assign each object to nearest center</description>
+        <description xml:lang="ar">تشكيل العناقيد بحساب بُعد كل نقطة من نقاط البيانات عن هذه المراكز وإسنادها إلى العنقود ذو المركز الأقرب</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k-mediansOpreator3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k-mediansOpreator3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#k-mediansOpreator4"/>
+        <description xml:lang="en">update the cluster means, that is, calculate the medians value of the objects for each cluster;</description>
+        <description xml:lang="ar">إعادة حساب مراكز العناقيد الجديدة (القيم الوسطى للنقاط المسندة إليها).</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k-mediansOpreator4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k-mediansOpreator4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <description xml:lang="ar">يتم تكرار الخطوتان 2، 3 حتى يصبح التغير في مراكز العناقيد معدوماً أو الوصول إلى عدد معين (محدد مسبقاً) من التكرارات</description>
+        <description xml:lang="en">يتم تكرار الخطوتان 2، 3 حتى يصبح التغير في مراكز العناقيد معدوماً أو الوصول إلى عدد معين (محدد مسبقاً) من التكرارات</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_meanInput -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_meanInput">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#input"/>
+        <canGetData rdf:resource="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.1936.tb02137.x"/>
+        <canGetData rdf:resource="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html"/>
+        <canGetData rdf:resource="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_circles.html"/>
+        <label xml:lang="en">not labeled</label>
+        <label xml:lang="ar">لا يوجد</label>
+        <sample xml:lang="en">Distribution of objects in space</sample>
+        <sample xml:lang="ar">توزع الأغراض في الفضاء</sample>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_meanOutput -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_meanOutput">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Output"/>
+        <evaluateBy rdf:resource="https://www.w3.org/ns/ai#clusteringEvaluate"/>
+        <type xml:lang="en">Distribute the objects into clusters</type>
+        <type xml:lang="ar">توزع الأغراض على هذه العناقيد</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_meansLimitation1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_meansLimitation1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Limitation"/>
+        <solvedBy rdf:resource="http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf"/>
+        <description xml:lang="en">Results are affected by primitive centers</description>
+        <description xml:lang="ar">تتأثر النتائج بتوزع المراكز البدائية</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_meansLimitation2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_meansLimitation2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Limitation"/>
+        <solvedBy rdf:resource="https://onlinelibrary.wiley.com/doi/10.1002/9780470316801.ch2"/>
+        <solvedBy rdf:resource="https://www.w3.org/ns/ai#K-Medians"/>
+        <description xml:lang="en">It is affected by noise values and outliers</description>
+        <description xml:lang="ar">تتأثر بقيم الضجيج وبقيم النقاط الشاذة</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_meansLimitation3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_meansLimitation3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Limitation"/>
+        <solvedBy rdf:resource="https://dl.acm.org/doi/10.1145/1014052.1014118"/>
+        <description xml:lang="en">It cann&apos;t find clusters Distribution of the non-convex shapes</description>
+        <description xml:lang="ar">لا يمكنها إيجاد عناقيد ذات أشكال غير محدبة</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_meansLimitation4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_meansLimitation4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Limitation"/>
+        <description xml:lang="en">Need to specify the number of clusters</description>
+        <description xml:lang="ar">تحتاج لتحديد عدد العناقيد</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_meansOperator1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_meansOperator1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#k_meansOperator2"/>
+        <description xml:lang="en">arbitrarily choose k objects from D as the initial cluster centers</description>
+        <description xml:lang="ar">اختيار مجموعة من النقاط بشكل عشوائي واعتبارها مراكز العناقيد</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_meansOperator2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_meansOperator2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#k_meansOpreator3"/>
+        <description xml:lang="en">Assign each object to nearest center</description>
+        <description xml:lang="ar">تشكيل العناقيد بحساب بُعد كل نقطة من نقاط البيانات عن هذه المراكز وإسنادها إلى العنقود ذو المركز الأقرب</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_meansOpreator3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_meansOpreator3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#k_meansOpreator4"/>
+        <description xml:lang="en">update the cluster means, that is, calculate the mean value of the objects for each cluster</description>
+        <description xml:lang="ar">إعادة حساب مراكز العناقيد الجديدة وهي متوسطات النقاط المسندة إليها</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_meansOpreator4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_meansOpreator4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <description xml:lang="en">repeat step 2 &amp; step 3 until the positions of the centers become fixed and do not change.</description>
+        <description xml:lang="ar">يتم تكرار الخطوتان 2، 3 حتى يصبح التغير في مراكز العناقيد معدوماً أو الوصول إلى عدد معين (محدد مسبقاً) من التكرارات</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_medoidsOpreator1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_medoidsOpreator1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#k_medoidsOpreator2"/>
+        <description xml:lang="en">arbitrarily choose k objects from D as the initial cluster centers</description>
+        <description xml:lang="ar">اختيار مجموعة من النقاط بشكل عشوائي واعتبارها مراكز العناقيد</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_medoidsOpreator2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_medoidsOpreator2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#k_medoidsOpreator3"/>
+        <description xml:lang="en">Assign each object to nearest center</description>
+        <description xml:lang="ar">تشكيل العناقيد بحساب بُعد كل نقطة من نقاط البيانات عن هذه المراكز وإسنادها إلى العنقود ذو المركز الأقرب</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_medoidsOpreator3 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_medoidsOpreator3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#k_medoidsOpreator4"/>
+        <description xml:lang="en">randomly select a nonrepresentative object, o_random; compute the total cost, S, of swapping representative object, o_j , with o_random; if S &lt; 0   then swap o_j with o_randomto form the new set of k representative objects;</description>
+        <description xml:lang="ar">إعادة حساب مراكز العناقيد الجديدة وذلك من خلال اختيار نقطة عشوائية وحساب كلفة استبدال المركز الحالي للعنقود التي تنتمي إليه النقطة العشوائية بالنقطة العشوائية، إذا كانت كلفة الاستبدال أكبر من الصفر يتم اختيار نقطة أخرى وإلا تصبح النقطة العشوائية هي المركز الجديد</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_medoidsOpreator4 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_medoidsOpreator4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <description xml:lang="en">repeat step 2 &amp; step 3 until the positions of the centers become fixed and do not change</description>
+        <description xml:lang="ar">يتم تكرار الخطوتان 2، 3 حتى يصبح التغير في مراكز العناقيد معدوماً أو الوصول إلى عدد معين (محدد مسبقاً) من التكرارات</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#kernelK-meansOpreator1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#kernelK-meansOpreator1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#KernelK-meansOpreator2"/>
+        <description xml:lang="ar">arbitrarily choose k objects from D as the initial cluster centers</description>
+        <description xml:lang="ar">اختيار مجموعة من النقاط بشكل عشوائي واعتبارها مراكز العناقيد</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#kernelK_meansInput -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#kernelK_meansInput">
+        <canGetData rdf:resource="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.1936.tb02137.x"/>
+        <canGetData rdf:resource="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html"/>
+        <canGetData rdf:resource="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_circles.html"/>
+        <canGetData rdf:resource="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_moons.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#kmean -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#kmean">
+        <name xml:lang="ar">kmeans</name>
+        <name xml:lang="en">kmeans</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#nonConvexShapeClustering -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#nonConvexShapeClustering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Task"/>
+        <hasInput rdf:resource="https://www.w3.org/ns/ai#kernelK_meansInput"/>
+        <produce rdf:resource="https://www.w3.org/ns/ai#k_meanOutput"/>
+        <uses rdf:resource="https://dl.acm.org/doi/10.1145/1014052.1014118"/>
+        <description xml:lang="en">Classification of unlabeled data having a convex distribution or another distribution into a number of clusters, according to the similarity of these objects.</description>
+        <description xml:lang="ar">تصنيف البيانات غير المصنفة بغض النظر عن توزعها في الفضاء إلى عدد من العناقيد، وفقًا لمقدار التشابه بين هذه لأغراض.</description>
+        <type xml:lang="en">unsupervised learning</type>
+        <type xml:lang="ar">غير خاضع للإشراف</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#numberOfIteration -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#numberOfIteration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#HyperParameter"/>
+        <description xml:lang="en">The number of iterations must be determined before the algorithm starts in order to control the algorithm stopping after a certain number of iterations.</description>
+        <description xml:lang="ar">يجب تحديد عدد التكرارات قبل بدء الخوارزمية من أجل التحكم في توقف الخوارزمية بعد عدد معين من التكرارات.</description>
+        <type xml:lang="en">number of iteration</type>
+        <type xml:lang="ar">عدد مرات التكرار</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#setOfCluster -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#setOfCluster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Parameter"/>
+        <description xml:lang="en">the objects within a cluster must similar to one another but dissimilar to objects in other clusters</description>
+        <description xml:lang="ar">يجب أن تكون الأغراض متشابهة ضمن العنقود الواحد، ومختلفة عن الأغراض الموجودة في باقي العناقيد</description>
+        <type xml:lang="en">A set of k clusters</type>
+        <type xml:lang="ar">توزع الأغراض ضمن العناقيد</type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#k_means++Opreator1 -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#k_means++Opreator1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muhannad/ontologies/2021/6/ai#Operator"/>
+        <hasNext rdf:resource="https://www.w3.org/ns/ai#k_meansOperator2"/>
+        <description xml:lang="en">the first center is chosen randomly, and then the rest of the centers are chosen so that they are as far from each other as possible.</description>
+        <description xml:lang="ar">يتم اختيار المركز الأول بشكل عشوائي ، ثم يتم اختيار المراكز المتبقية بحيث تكون بعيدة عن بعضها البعض قدر الإمكان</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3.org/ns/ai#kmean++ -->
+
+    <owl:NamedIndividual rdf:about="https://www.w3.org/ns/ai#kmean++">
+        <name xml:lang="ar">kmeans++</name>
+        <name xml:lang="en">kmeans++</name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
